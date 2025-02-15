@@ -11,22 +11,23 @@ export default function LabPage() {
     const { labId } = useParams<{ labId: string }>();
 
     if (!labId || !availableLabs[labId]) {
-        return <h1>Лабораторная работа не найдена</h1>;
+        return <h1>Лабораторна робота не знайдена</h1>;
     }
 
     const tasks = availableLabs[labId];
 
     return (
         <div>
-            <h1>Лабораторная работа {labId}</h1>
-            <ul>
+            <h1>Лабораторна робота {labId}</h1>
+            <div className="lab-task-list">
                 {tasks.map((task) => (
-                    <li key={task}>
-                        <Link to={`/lab/${labId}/task/${task}`}>Задание {task}</Link>
-                    </li>
+                    <div key={task} className="lab-task-item">
+                        <Link to={`/lab/${labId}/task/${task}`}>
+                            Завдання {task}
+                        </Link>
+                    </div>
                 ))}
-            </ul>
-            <Link to="/">Назад</Link>
+            </div>
         </div>
     );
 }

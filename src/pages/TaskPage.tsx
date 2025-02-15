@@ -8,19 +8,18 @@ export default function TaskPage() {
     useEffect(() => {
         if (!labId || !taskId) return;
 
-        // Динамический импорт нужного компонента
         import(`../pages/lab${labId}/Task${taskId}.tsx`)
             .then((module) => setTaskComponent(() => module.default))
             .catch(() => setTaskComponent(null));
     }, [labId, taskId]);
 
     if (!labId || !taskId) {
-        return <h1>Задание не найдено</h1>;
+        return <h1>Завдання не знайдено</h1>;
     }
 
     return (
         <div>
-            {TaskComponent ? <TaskComponent /> : <h2>Задание не найдено</h2>}
+            {TaskComponent ? <TaskComponent /> : <h2>Завдання не знайдено</h2>}
         </div>
     );
 }

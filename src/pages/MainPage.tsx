@@ -1,18 +1,20 @@
 import { Link } from "react-router-dom";
 
-const labs = [1, 2, 3, 4, 5];
+const labs = [1, 2, 3, 4];
 
 export default function MainPage() {
     return (
         <div>
-            <h1>Главная страница</h1>
-            <ul>
+            <h1>Головна сторінка</h1>
+            <div className="lab-task-list">
                 {labs.map((lab) => (
-                    <li key={lab}>
-                        <Link to={`/lab/${lab}`}>Лабораторная работа {lab}</Link>
-                    </li>
+                    <div key={lab} className="lab-task-item">
+                        <Link to={`/lab/${lab}`}>
+                            Лабораторна робота {lab}
+                        </Link>
+                    </div>
                 ))}
-            </ul>
+            </div>
         </div>
     );
 }

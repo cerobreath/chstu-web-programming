@@ -2,6 +2,8 @@ import { Routes, Route } from "react-router-dom";
 import MainPage from "./pages/MainPage.tsx";
 import LabPage from "./pages/LabPage";
 import TaskPage from "./pages/TaskPage";
+import 'rsuite/dist/rsuite.min.css';
+
 
 export default function App() {
     return (
