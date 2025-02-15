@@ -1,7 +1,6 @@
 export default function Task3() {
     return (
         <div>
-            <h1 className="header-site">Завдання 5. Вкладені списки</h1>
 
             <ul className="list-disc pl-6 text-lg">
                 <li>Пункт 1

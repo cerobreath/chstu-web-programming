@@ -1,7 +1,6 @@
 export default function Task3() {
     return (
         <div>
-            <h1 className="header-site">Завдання 4. Використання списків</h1>
 
             <h2>Емерджентна властивість</h2>
             <ul className="list-disc list-inside text-lg">

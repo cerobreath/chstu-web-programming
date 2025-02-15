@@ -1,29 +1,25 @@
 import { Link, useParams } from "react-router-dom";
+import {labs} from "../config.ts";
 
-// Определяем доступные лабораторные и задания
-const availableLabs: Record<string, number[]> = {
-    "1": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
-    "2": [1, 2],
-    "3": [1, 2, 3, 4, 5],
-};
+
 
 export default function LabPage() {
     const { labId } = useParams<{ labId: string }>();
 
-    if (!labId || !availableLabs[labId]) {
+    const lab = labs.find((l) => l.id === Number(labId));
+    if (!lab || !lab) {
         return <h1>Лабораторна робота не знайдена</h1>;
     }
 
-    const tasks = availableLabs[labId];
 
     return (
         <div>
-            <h1 className={"header-site"}>Лабораторна робота {labId}</h1>
+            <h1 className={"header-site"}>Лабораторна робота {lab.id}</h1>
             <div className="lab-task-list">
-                {tasks.map((task) => (
-                    <div key={task} className="lab-task-item">
-                        <Link to={`/lab/${labId}/task/${task}`}>
-                            Завдання {task}
+                {lab.tasks.map((task) => (
+                    <div key={task.id} className="lab-task-item">
+                        <Link to={`/lab/${lab.id}/task/${task.id}`}>
+                            Завдання {task.id} - {task.description}
                         </Link>
                     </div>
                 ))}
