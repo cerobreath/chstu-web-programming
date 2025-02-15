@@ -1,10 +1,10 @@
 @import "tailwindcss";
 
 body {
-    @apply bg-[#fbf8f5] text-slate-600 font-sans flex items-center justify-center min-h-screen;
+    @apply bg-[#fbf8f5] font-sans flex items-center justify-center min-h-screen;
 }
 
-h1 {
+.header-site {
     @apply text-center text-3xl font-bold text-gray-700 mb-8;
 }
 
@@ -28,4 +28,12 @@ h1 {
 
 p {
     @apply text-lg;
+}
+
+.font-playfair {
+    font-family: 'Playfair Display', serif;
+}
+
+.font-source-sans {
+    font-family: 'Source Sans Pro', sans-serif;
 }

@@ -3,7 +3,7 @@ export default function Task1() {
         <div>
             {/* Автор: Лисенок Денис, 15.02.2025 */}
             <title>Лабораторна 1. Завдання 1.</title>
-            <h1>Завдання 1. Робота з текстом</h1>
+            <h1 className={"header-site"}>Завдання 1. Робота з текстом</h1>
             <h2>Wake Me Up When September Ends</h2>
             <h3>Song by Green Day ‧ 2004</h3>
 

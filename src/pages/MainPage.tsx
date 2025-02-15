@@ -5,7 +5,7 @@ const labs = [1, 2, 3, 4];
 export default function MainPage() {
     return (
         <div>
-            <h1>Головна сторінка</h1>
+            <h1 className={"header-site"}>Головна сторінка</h1>
             <div className="lab-task-list">
                 {labs.map((lab) => (
                     <div key={lab} className="lab-task-item">

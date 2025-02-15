@@ -18,7 +18,7 @@ export default function LabPage() {
 
     return (
         <div>
-            <h1>Лабораторна робота {labId}</h1>
+            <h1 className={"header-site"}>Лабораторна робота {labId}</h1>
             <div className="lab-task-list">
                 {tasks.map((task) => (
                     <div key={task} className="lab-task-item">
