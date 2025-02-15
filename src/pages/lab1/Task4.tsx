@@ -1,7 +1,6 @@
 export default function Task3() {
     return (
         <div>
-            <title>Лабораторна 1. Завдання 4.</title>
             <h1 className="header-site">Завдання 4. Використання списків</h1>
 
             <h2>Емерджентна властивість</h2>

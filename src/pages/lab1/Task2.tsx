@@ -7,7 +7,6 @@ export default function Task2() {
                     Зверніть увагу, що шрифт прізвища автора меншого розміру. Зауважимо, що текст в різних браузерах може відображатися дещо по-різному.
                 */
             }
-            <title>Лабораторна 1. Завдання 2.</title>
             <h1 className={"header-site"}>Завдання 2. Робота з текстом</h1>
             <h2 className={"font-playfair text-[#634832]"}>Hot N Cold</h2>
             <p className={"text-lg md:text-xl font-source-sans text-[#634832]"}>Song by Katy Perry ‧ 2008</p>

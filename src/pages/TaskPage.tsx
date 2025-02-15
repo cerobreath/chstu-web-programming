@@ -7,12 +7,12 @@ export default function TaskPage() {
 
     useEffect(() => {
         if (!labId || !taskId) return;
+        document.title = `Лабораторна ${labId}. Завдання ${taskId}.`;
 
         import(`../pages/lab${labId}/Task${taskId}.tsx`)
             .then((module) => setTaskComponent(() => module.default))
             .catch(() => setTaskComponent(null));
     }, [labId, taskId]);
-
     if (!labId || !taskId) {
         return <h1>Завдання не знайдено</h1>;
     }
