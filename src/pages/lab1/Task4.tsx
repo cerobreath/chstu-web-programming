@@ -1,4 +1,4 @@
-export default function Task3() {
+export default function Task4() {
     return (
         <div>
 
@@ -10,8 +10,9 @@ export default function Task3() {
             <h3>Приклад властивості</h3>
             <ul className="list-disc list-inside text-lg">
                 <li>Ніж має властивість <strong>гострота</strong>
+                    <li>Ніж складається з атомів</li>
                     <ul className="list-circle list-inside pl-4 text-lg">
-                        <li>Ніж складається з атомів
+                        <li>
                             <ul className="list-[square] list-inside pl-8 text-lg">
                                 <li>❗ Атоми окремо не мають властивості гострота</li>
                                 <li>Але об'єднані атоми у систему <strong>"Ніж"</strong> можуть мати властивість <strong>гострота</strong></li>

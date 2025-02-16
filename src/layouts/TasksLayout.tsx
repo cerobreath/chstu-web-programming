@@ -1,5 +1,6 @@
 import {Link, useParams} from "react-router-dom";
 import React, { useState, useEffect } from "react";
+import { ArrowLeft } from "lucide-react";
 import {labs} from "../config.ts";
 
 export default function TasksLayout() {
@@ -25,14 +26,21 @@ export default function TasksLayout() {
     }
 
     return (
-        <div>
-            <h1 className="flex justify-center items-center" >
-                <Link to={`/lab/${labId}`}>
-                        <p>home</p>
-                </Link>
-                <p className="header-site">Завдання {task.id}. {task.description}</p>
+        <div className="relative p-4">
+
+            <Link
+                to={`/lab/${labId}`}
+                className="fixed top-2 left-2 flex items-center gap-2 p-2 text-blue-500 hover:text-blue-700 transition"
+            >
+                <ArrowLeft size={24} />
+                <span className="text-lg font-medium">Назад</span>
+            </Link>
+
+            <h1 className="header-site">
+                Завдання {task.id}. {task.description}
             </h1>
-            {TaskComponent ? <TaskComponent/> : <h2>Завдання не знайдено</h2>}
+
+            {TaskComponent ? <TaskComponent /> : <h2 className="text-center text-red-500">Завдання не знайдено</h2>}
         </div>
     );
 }

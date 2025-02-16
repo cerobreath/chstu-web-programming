@@ -37,3 +37,13 @@ p {
 .font-source-sans {
     font-family: 'Source Sans Pro', sans-serif;
 }
+
+.table-task-7 {
+    width: 1000px;
+}
+.table-task-8 {
+    width: 800px;
+}
+.td-task {
+    text-align: center;
+}
