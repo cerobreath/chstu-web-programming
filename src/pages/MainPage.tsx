@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import {labs} from "../config.ts";
 
-
 export default function MainPage() {
     return (
         <div>
