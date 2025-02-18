@@ -13,7 +13,7 @@ export default function Task2() {
             <hr />
 
             <p>
-                You change your mind<br />
+                <b><em>You change your mind</em></b><br />
                 Like a girl changes clothes<br />
                 Yeah, you PMS like a bitch<br />
                 I would know<br />

@@ -4,29 +4,42 @@ import { ArrowLeft } from "lucide-react";
 import { labs } from "../config.ts";
 
 export default function TasksLayout() {
+    // Отримуємо labId (номер лабораторної) та taskId (номер завдання) з URL
     const { labId, taskId } = useParams<{ labId: string; taskId: string }>();
+
+    // Стан для збереження компонента завдання
     const [TaskComponent, setTaskComponent] = useState<React.FC | null>(null);
 
-    // Перетворюємо ID у числа та перевіряємо валідність
+    // Конвертуємо параметри у числа
     const labIdNum = Number(labId);
     const taskIdNum = Number(taskId);
+
+    // Знаходимо відповідну лабораторну роботу та завдання у конфігурації
     const lab = labs.find((lab) => lab.id === labIdNum);
     const task = lab?.tasks.find((t) => t.id === taskIdNum);
 
+    // Перевіряємо, чи знайдено лабораторну та завдання
     const isValidLab = !!lab;
     const isValidTask = !!task;
 
+    // Використовуємо useEffect для динамічного завантаження компонента завдання
     useEffect(() => {
+        // Якщо лабораторна або завдання не знайдені, не завантажуємо компонент
         if (!isValidLab || !isValidTask) return;
 
+        // Оновлюємо заголовок сторінки
         document.title = `Лабораторна ${labId}. Завдання ${taskId}.`;
 
+        // Динамічно імпортуємо компонент завдання
         import(`../pages/lab${labId}/Task${taskId}.tsx`)
-            .then((module) => setTaskComponent(() => module.default))
-            .catch(() => setTaskComponent(null));
-    }, [labId, taskId, isValidLab, isValidTask]);
+            .then((module) => setTaskComponent(() => module.default)) // Якщо імпорт успішний, зберігаємо компонент у стані
+            .catch(() => setTaskComponent(null)); // Якщо сталася помилка, скидаємо стан компонента
+    }, [labId, taskId, isValidLab, isValidTask]); // Запускаємо useEffect при зміні labId, taskId, isValidLab, isValidTask
 
+    // Якщо лабораторна не знайдена, виводимо повідомлення про помилку
     if (!isValidLab) return <h1 className="text-center text-red-500">Лабораторна не знайдена</h1>;
+
+    // Якщо завдання не знайдено, виводимо відповідне повідомлення
     if (!isValidTask) return <h1 className="text-center text-red-500">Завдання не знайдено</h1>;
 
     return (
