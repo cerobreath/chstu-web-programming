@@ -7,7 +7,7 @@ export default function MainPage() {
             <h1 className={"header-site"}>Головна сторінка</h1>
             <div className="lab-task-list">
                 {labs.map((lab) => (
-                    <div key={lab.id} className="lab-task-item">
+                    <div key={lab.id} className="lab-page-item">
                         <Link to={`/lab/${lab.id}`}>
                             Лабораторна робота {lab.id}
                         </Link>
