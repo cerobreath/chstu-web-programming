@@ -6,6 +6,7 @@ export default function Task15() {
 
     return (
         <div className="mx-auto p-4 bg-[#f5ebe0] rounded-2xl shadow-lg">
+            <button type="button">Base class</button>
             {/* Меню вкладок */}
             <div className="mb-4 font-bold">
                 {/* .map((tab) => ( ... )) – перебирає кожен елемент масиву та повертає JSX-код для кнопки */}
@@ -32,11 +33,11 @@ export default function Task15() {
                 {activeTab === "coffee" && (
                     <ul className="space-y-2">
                         <li className="flex items-center text-lg lavishly-yours-regular">
-                            <Coffee className="w-5 h-5 mr-2 text-[#6d4c41]" />
+                            <Coffee className="w-5 h-5 mr-2 text-[#6d4c41]"/>
                             Espresso
                         </li>
                         <li className="flex items-center text-lg lavishly-yours-regular">
-                            <Coffee className="w-5 h-5 mr-2 text-[#6d4c41]" />
+                            <Coffee className="w-5 h-5 mr-2 text-[#6d4c41]"/>
                             Latte
                         </li>
                     </ul>
@@ -44,11 +45,11 @@ export default function Task15() {
                 {activeTab === "tea" && (
                     <ul className="space-y-2">
                         <li className="flex items-center text-lg lavishly-yours-regular">
-                            <Vegan className="w-5 h-5 mr-2 text-[#6d4c41]" />
+                            <Vegan className="w-5 h-5 mr-2 text-[#6d4c41]"/>
                             Black tea
                         </li>
                         <li className="flex items-center text-lg lavishly-yours-regular">
-                            <Vegan className="w-5 h-5 mr-2 text-[#6d4c41]" />
+                            <Vegan className="w-5 h-5 mr-2 text-[#6d4c41]"/>
                             Green tea
                         </li>
                     </ul>
@@ -56,11 +57,11 @@ export default function Task15() {
                 {activeTab === "desserts" && (
                     <ul className="space-y-2">
                         <li className="flex items-center text-lg lavishly-yours-regular">
-                            <Croissant className="w-5 h-5 mr-2 text-[#6d4c41]" />
+                            <Croissant className="w-5 h-5 mr-2 text-[#6d4c41]"/>
                             Croissant
                         </li>
                         <li className="flex items-center text-lg lavishly-yours-regular">
-                            <Cake className="w-5 h-5 mr-2 text-[#6d4c41]" />
+                            <Cake className="w-5 h-5 mr-2 text-[#6d4c41]"/>
                             Tiramisu
                         </li>
                     </ul>

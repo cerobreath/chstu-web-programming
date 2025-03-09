@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Pixelify+Sans:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
+@import "bootstrap";
+
+.main {
+    background: #fbf8f5;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.font-pixelify {
+    font-family: Pixelify Sans, sans-serif;
+}
+
+.text-header {
+    color: #8e6350;
+}
+
+.text-signature {
+    color: #456e52;
+}
+
+.main-border {
+    width: 200px;
+    height: 4px;
+    background-color: #8e6350;
+    margin: 0 auto 10px auto;
+}
+
+.welcome-text {
+    margin-top: 60px;
+}
+
+.text-limited {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.custom-carousel {
+    max-width: 800px;
+    margin: auto;
+    border: 3px solid black;
+    box-shadow: 4px 4px 0 black;
+}
+
+.slide-image {
+    object-fit: cover; /* Адаптація зображення */
+    border: 3px solid black;
+}
+
+/* Налаштування кнопок */
+.carousel-control-prev, .carousel-control-next {
+    color: #8e6350;
+}
+
+/* Стилі для підписів */
+.carousel-caption {
+    background: rgba(0, 0, 0, 0.5); /* Прозорий чорний фон */
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.box-container {
+    max-width: 800px;
+    margin: auto;
+    border: 3px solid black;
+    box-shadow: 4px 4px 0 black;
+}
+
+.feature-box {
+    background-color: #fff;
+    border: 3px solid black;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    max-width: 300px;
+    box-shadow: 5px 5px 0 black;
+    margin: 10px;
+}
+
+.feature-icon {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 10px;
+}
+
+.feature-title {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    color: #6d4c41;
+    margin-bottom: 5px;
+}
+
+.about-box {
+    background-color: #fff;
+    border: 3px solid black;
+    padding: 20px;
+    text-align: left;
+    width: 100%;
+    max-width: 900px;
+    box-shadow: 5px 5px 0 black;
+    margin: 10px auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.about-icon {
+    width: 100%;
+    max-width: 300px;
+    height: 300px;
+    object-fit: cover;
+}
+
+
+.about-title {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    color: #6d4c41;
+    margin-bottom: 5px;
+}
+
+@media (min-width: 768px) {
+    .about-box {
+        flex-direction: row;
+    }
+}
+
+.footer {
+    padding: 20px;
+}
+
+.footer-text {
+    color: #6d4c41;
+    font-size: 13px;
+}
+
+.footer-links {
+    margin-top: 10px;
+}
+
+.footer-link {
+    color: #6abefc;
+    font-size: 16px;
+    margin: 10px;
+}

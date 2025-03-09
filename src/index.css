@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Lavishly+Yours&display=swap');
 @import "tailwindcss";
+@import "bootstrap";
 
 body {
     @apply bg-[#fbf8f5] font-sans flex items-center justify-center min-h-screen;
