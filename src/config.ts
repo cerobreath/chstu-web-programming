@@ -49,7 +49,10 @@ export const labs: Lab[] = [
     },
     {
         id: 5,
-        tasks: []
+        tasks: [
+            { id: 1, description: "Розрахунок бюджету та витрат" },
+            { id: 2, description: "Обчислення площі фігури" }
+        ]
     },
     {
         id: 6,
