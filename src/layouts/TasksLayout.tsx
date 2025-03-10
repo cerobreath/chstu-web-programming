@@ -32,8 +32,12 @@ export default function TasksLayout() {
 
         // Динамічно імпортуємо компонент завдання
         import(`../pages/lab${labId}/Task${taskId}.tsx`)
-            .then((module) => setTaskComponent(() => module.default)) // Якщо імпорт успішний, зберігаємо компонент у стані
-            .catch(() => setTaskComponent(null)); // Якщо сталася помилка, скидаємо стан компонента
+            .then((module) => setTaskComponent(() => module.default))
+            .catch(() => {
+                import(`../pages/lab${labId}/Task${taskId}.jsx`)
+                    .then((module) => setTaskComponent(() => module.default))
+                    .catch(() => setTaskComponent(null));
+            });
     }, [labId, taskId, isValidLab, isValidTask]); // Запускаємо useEffect при зміні labId, taskId, isValidLab, isValidTask
 
     // Якщо лабораторна не знайдена, виводимо повідомлення про помилку

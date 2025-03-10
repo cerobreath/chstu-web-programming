@@ -56,6 +56,8 @@ export const labs: Lab[] = [
     },
     {
         id: 6,
-        tasks: []
+        tasks: [
+            { id: 1, description: "Сортування рядка за кількістю літер" }
+        ]
     }
 ];
