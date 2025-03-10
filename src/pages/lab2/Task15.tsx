@@ -6,7 +6,6 @@ export default function Task15() {
 
     return (
         <div className="mx-auto p-4 bg-[#f5ebe0] rounded-2xl shadow-lg">
-            <button type="button">Base class</button>
             {/* Меню вкладок */}
             <div className="mb-4 font-bold">
                 {/* .map((tab) => ( ... )) – перебирає кожен елемент масиву та повертає JSX-код для кнопки */}

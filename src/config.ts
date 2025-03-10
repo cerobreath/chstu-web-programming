@@ -42,7 +42,10 @@ export const labs: Lab[] = [
     },
     {
         id: 4,
-        tasks: []
+        tasks: [
+            { id: 1, description: "Валідація email та підрахунок символів" },
+            { id: 2, description: "Зміна кольору фону" }
+        ]
     },
     {
         id: 5,
