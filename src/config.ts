@@ -45,7 +45,8 @@ export const labs: Lab[] = [
         id: 4,
         tasks: [
             { id: 1, description: "Валідація email та підрахунок символів" },
-            { id: 2, description: "Зміна кольору фону" }
+            { id: 2, description: "Зміна кольору фону" },
+            { id: 3, description: "Захист" }
         ]
     },
     {
@@ -58,7 +59,8 @@ export const labs: Lab[] = [
     {
         id: 6,
         tasks: [
-            { id: 1, description: "Сортування рядка за кількістю літер" }
+            { id: 1, description: "Сортування рядка за кількістю літер" },
+            { id: 2, description: "Захист" }
         ]
     }
 ];
